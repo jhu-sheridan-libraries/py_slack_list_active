@@ -5,24 +5,59 @@
 #    pip-compile --output-file=requirements-dev.txt requirements/requirements-dev.in
 #
 awscli==1.16.201
-botocore==1.12.191        # via awscli, s3transfer
-certifi==2019.6.16        # via requests
-chardet==3.0.4            # via requests
-colorama==0.3.9           # via awscli
-docutils==0.14            # via awscli, botocore
-entrypoints==0.3          # via flake8
+    # via -r requirements/requirements-dev.in
+boto3==1.9.191
+    # via -r requirements/requirements.in
+botocore==1.12.191
+    # via
+    #   awscli
+    #   boto3
+    #   s3transfer
+certifi==2019.6.16
+    # via requests
+charset-normalizer==3.3.2
+    # via requests
+colorama==0.3.9
+    # via awscli
+docutils==0.14
+    # via
+    #   awscli
+    #   botocore
+entrypoints==0.3
+    # via flake8
 flake8==3.7.8
-idna==2.8                 # via requests
+    # via -r requirements/requirements-dev.in
+idna==2.8
+    # via requests
 jhulib-slack==0.0.3.20190714232833
-jmespath==0.9.4           # via botocore
-mccabe==0.6.1             # via flake8
-pyasn1==0.4.5             # via rsa
-pycodestyle==2.5.0        # via flake8
-pyflakes==2.1.1           # via flake8
-python-dateutil==2.8.0    # via botocore
-pyyaml==5.1               # via awscli
-requests==2.22.0          # via jhulib-slack
-rsa==3.4.2                # via awscli
-s3transfer==0.2.1         # via awscli
-six==1.12.0               # via python-dateutil
-urllib3==1.25.3           # via botocore, requests
+    # via -r requirements/requirements.in
+jmespath==0.9.4
+    # via
+    #   boto3
+    #   botocore
+mccabe==0.6.1
+    # via flake8
+pyasn1==0.4.5
+    # via rsa
+pycodestyle==2.5.0
+    # via flake8
+pyflakes==2.1.1
+    # via flake8
+python-dateutil==2.8.0
+    # via botocore
+pyyaml==5.1
+    # via awscli
+requests==2.32.0
+    # via jhulib-slack
+rsa==3.4.2
+    # via awscli
+s3transfer==0.2.1
+    # via
+    #   awscli
+    #   boto3
+six==1.12.0
+    # via python-dateutil
+urllib3==1.25.3
+    # via
+    #   botocore
+    #   requests
